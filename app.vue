@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { ResourceType, userStore } from './store/dataStore'
+import { userStore } from './store/dataStore'
 import Expanasion1 from './components/Expanasion.vue';
+import { data } from './data';
    
   const store = userStore()
   const search = ref<string>()
   onMounted(async () => {
-     try {
-       const res =  await $fetch<ResourceType[], '/api'>('/api', { method: 'GET' })
-       console.log(res);
+    //  try {
+    //    const res =  await $fetch<ResourceType[], '/api'>('/api', { method: 'GET' })
+    //    console.log(res);
        
-         store.queryData = res
-     } catch (error: any) {
-        console.log(error.message);
-     }
+    //      store.queryData = res
+    //  } catch (error: any) {
+    //     console.log(error.message);
+    //  }
+    store.queryData = data
    
   })
    

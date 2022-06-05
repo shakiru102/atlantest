@@ -8,7 +8,7 @@ export type ResourceType ={
     address: string;
     city: string;
     region: string;
-    postalCode: string;
+    postalCode: number | string;
     country: string
     phone: string;
     fax: string;
