@@ -7,6 +7,8 @@ import Expanasion1 from './components/Expanasion.vue';
   onMounted(async () => {
      try {
        const res =  await $fetch<ResourceType[], '/api'>('/api', { method: 'GET' })
+       console.log(res);
+       
          store.queryData = res
      } catch (error: any) {
         console.log(error.message);
